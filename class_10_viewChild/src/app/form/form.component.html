@@ -1,0 +1,14 @@
+<div class="form-container">
+  <form #form="ngForm">
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" #inputName (keyup)="isValid()" ngModel required >
+    </div>
+    <div>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" #inputEmail (keyup)="isValid()" ngModel required>
+    </div>
+    <button #textButton type="button" [disabled]="btnDisabled" (click)="submitForm()">Enviar</button>
+  </form>
+</div>
+
